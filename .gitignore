@@ -1,0 +1,10 @@
+share.db
+main.db
+json/settings.json
+.env
+.vscode
+.vscode/*
+sqlkun/other/__pycache__/*
+sqlkun/data/__pycache__/*
+sqlkun/commands/__pycache__/*
+start.bat
