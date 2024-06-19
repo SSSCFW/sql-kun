@@ -92,7 +92,6 @@ class SQLCommand(commands.Cog):
             await util.send_traceback(ctx)
 
 
-
     @commands.command()
     async def sql(self, ctx, *, sql):
         try:
