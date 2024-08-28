@@ -35,6 +35,12 @@ class Main(commands.Bot):
         await self.change_presence(status=discord.Status.idle, activity=gamestatus)
         self.study_loop.start()
 
+    @commands.Cog.listener()
+    async def on_raw_member_remove(self, payload):
+        if payload.guild_id == 1241314729209757767:
+            user = payload.user
+            await self.get_channel(1251364990842044486).send(f"{user.display_name} ({user.name}/{user.id})が退出しました。")
+
     @tasks.loop(seconds=60)
     async def study_loop(self):
         channel_id = 1241314729209757767
